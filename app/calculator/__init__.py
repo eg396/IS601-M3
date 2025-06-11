@@ -17,7 +17,7 @@ def calculator():
 
         ## Check if an exit is desired
 
-        if lower(user_input) == "quit":
+        if user_input.lower() == "quit":
             print("Goodbye!")
             break
 
@@ -36,17 +36,21 @@ def calculator():
         ## Once operation has been validated, parse and compute
 
         if operation == "add":
-            result = addition(num1, num2)
+            result = add(num1, num2)
 
         elif operation == "subtract":
-            result = subtraction(num1, num2)
+            result = subtract(num1, num2)
 
         elif operation == "multiply":
-            result = multiplication(num1, num2)
+            result = multiply(num1, num2)
+
+        ## Division is a bit tricky as we have to watch out for division by 0
 
         elif operation == "divide":
+
             try:
-                result = division(num1, num2)
+                result = divide(num1, num2)
+
             except ZeroDivisionError:
                 print("Cannot divide by zero. Please try again.")
                 continue
