@@ -1,0 +1,2 @@
+## Ignore python's venv folder. The user is expected to do this themselves
+venv/
