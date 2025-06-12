@@ -10,10 +10,11 @@ from app.operations import add, subtract, multiply, divide
 def calculator():
 
     print("Welcome to the Calculator Interface! Type 'quit' at any time to exit.")
+    print("_____________________________________________________________________")
 
     while True:
 
-        user_input = input("Enter a desired operation (add, subtract, multiply, divide), and then two numbers separated by a space.")
+        user_input = input("Enter a desired operation (add, subtract, multiply, divide), and then two numbers separated by a space. Type 'quit' to exit. \n")
 
         ## Check if an exit is desired
 
