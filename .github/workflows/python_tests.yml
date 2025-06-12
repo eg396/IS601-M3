@@ -2,26 +2,28 @@
 ## Evan Garvey
 ## IS 601, Module 3
 
-name: Python tests on Push / Pull Request
+name: Run Tests on Push or Pull Request to Main
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main  
   pull_request:
-    branches: [ main ]
+    branches:
+      - main  
 
-
-jobs: 
+jobs:
   test:
     runs-on: ubuntu-latest
 
     steps:
 
-      - name: Install dependencies
-      - run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
+      - name: Install dependencies from requirements.txt
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest pytest-cov  # Ensure pytest-cov is installed
 
-      - name: Run tests
-      - run: |
-        python -m pytest --cov=app --cov-fail-under=100
+      - name: Run tests with pytest and enforce 100% coverage
+        run: |
+          pytest --cov=app --cov-fail-under=100
