@@ -2,8 +2,8 @@ Python Calculator
 _________________
 
 TODO
-- Develop REPL Interface
-- Create arithmetic operation methods
+- Develop REPL Interface [Done]
+- Create arithmetic operation methods [Done]
 - Input validation / error handling
 - Unit tests (parameterized tests / 100% coverage)
 - Fill out documentation
